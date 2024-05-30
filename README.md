@@ -39,27 +39,31 @@ The `config.lua` file allows you to customize various aspects of the script.
 ```lua
 Config = {}
 
--- Jobs and Gangs Without Chat Access
-Config.JobsWithoutChat = {
-    "unemployed",
-    -- Add other jobs that should not have chat access
-}
-
-Config.GangsWithoutChat = {
-    "nogang",
-    -- Add other gangs that should not have chat access
-}
-
--- Job Chat Colors
+-- Job chat colors
 Config.JobColors = {
-    ["police"] = {r = 0, g = 0, b = 255},
-    ["ambulance"] = {r = 255, g = 0, b = 0},
-    -- Add other job colors
+    police = {0, 0, 255},   -- Blue for police
+    ambulance = {255, 0, 0}, -- Red for ambulance
+    mechanic = {0, 255, 0}  -- Green for mechanic
+    -- Add more jobs and their colors here
 }
 
--- Gang Chat Colors
+-- Gang chat colors
 Config.GangColors = {
-    ["ballas"] = {r = 75, g = 0, b = 130},
-    ["vagos"] = {r = 255, g = 255, b = 0},
-    -- Add other gang colors
+    ballas = {75, 0, 130}, -- Indigo for Ballas
+    vagos = {255, 255, 0}, -- Yellow for Vagos
+    families = {0, 128, 0} -- Green for Families
+    -- Add more gangs and their colors here
 }
+
+-- Jobs without chat
+Config.JobsWithoutChat = {
+    unemployed = true
+    -- Add more jobs that don't have chat here
+}
+
+-- Gangs without chat
+Config.GangsWithoutChat = {
+    none = true
+    -- Add more gangs that don't have chat here
+}
+```
